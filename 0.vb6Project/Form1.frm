@@ -660,11 +660,14 @@ Dim con As New ADODB.Connection
 Dim rst As New ADODB.Recordset
 Dim strSQL As String, intID As Integer
 
-con.ConnectionString = "Provider=SQLOLEDB;" _
-         & "Server=vs3550\SQLEXPRESS;" _
-         & "Database=POCVB6;" _
+'con.ConnectionString = "Provider=SQLOLEDB;" _
+         & "Server=(localdb)\MSSQLLocalDB;" _
+         & "Database=POC;" _
          & "Integrated Security=SSPI;" _
          & "DataTypeCompatibility=80;"
+
+
+con.ConnectionString = "Provider=SQLNCLI11;Server=(localdb)\MSSQLLocalDB;Database=POC;Trusted_Connection=yes;timeout=30;"
 
 con.Open
 con.IsolationLevel = adXactSerializable
@@ -674,11 +677,11 @@ con.Execute strSQL
 strSQL = ""
 'strSQL = "insert into employee (firstname, lastname, designation, intvalue, decvalue, datevalue) values ('" & _
     txtFirstName.Text & "','" & txtLastName.Text & "','" & txtDesignation.Text & "'," & txtIntValue.Text & "," & txtDecValue.Text & ",'" & txtDateValue.Text & "')"
-strSQL = "insert into employee (firstname, lastname, designation, intvalue, decvalue, datevalue, guid) values ('" & _
+strSQL = "insert into employee (firstname, lastname, designation, intvalue, decvalue, datevalue, id) values ('" & _
     txtFirstName.Text & "','" & txtLastName.Text & "','" & txtDesignation.Text & "'," & txtIntValue.Text & "," & txtDecValue.Text & ",GETDATE(), '" & GetGUID & "')"
-con.BeginTrans
+'con.BeginTrans
 con.Execute strSQL
-con.CommitTrans
+'con.CommitTrans
 
 'Dim rst As New ADODB.Recordset
 Set rst.ActiveConnection = con
@@ -707,7 +710,7 @@ Set con = Nothing
 Exit Sub
 
 Error_cmdInsert_Click:
-con.RollbackTrans
+'con.RollbackTrans
 
 End Sub
 

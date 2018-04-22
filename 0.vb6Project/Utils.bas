@@ -6,6 +6,19 @@ Data3 As Integer
 Data4(7) As Byte
 End Type
 
+'CREATE TABLE [dbo].[employee](
+'    [id] [varchar](36) NULL,
+'    [firstname] [varchar](36) NULL,
+'    [lastname] [varchar](36) NULL,
+'    [designation] [varchar](36) NULL,
+'    [intvalue] [int] NULL,
+'    [decvalue] [decimal](19, 4) NULL,
+'    [datevalue] [datetime] NULL
+') ON [PRIMARY]
+
+
+
+
 Private Declare Function CoCreateGuid Lib "OLE32.DLL" (pGuid As GUID) As Long
 
 Public Function GetGUID() As String
