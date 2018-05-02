@@ -1,6 +1,7 @@
 CREATE TABLE #engagements (Engagement varchar(30),  
-	EngagementStart      smalldatetime,  
-	EngagementEnd smalldatetime) 
+				EngagementStart smalldatetime,  
+				EngagementEnd smalldatetime) 
+				
 INSERT #engagements VALUES('Gulf of Tonkin','19640802','19640804') 
 INSERT #engagements VALUES('Da Nang','19650301','19650331') 
 INSERT #engagements VALUES('Tet Offensive','19680131','19680930') 
