@@ -50,3 +50,21 @@ End If
 
 End Function
 
+Public Function RandomString( _
+    ByVal length As Long, _
+    Optional charset As String = " abcdefghijklmnopqrstuvwxyz0123456789" _
+    ) As String
+    Dim chars() As Byte, value() As Byte, chrUprBnd As Long, i As Long
+    If length > 0& Then
+        Randomize
+        chars = charset
+        chrUprBnd = Len(charset) - 1&
+        length = (length * 2&) - 1&
+        ReDim value(length) As Byte
+        For i = 0& To length Step 2&
+            value(i) = chars(CLng(chrUprBnd * Rnd) * 2&)
+        Next
+    End If
+    RandomString = value
+End Function
+

@@ -8,6 +8,14 @@ Begin VB.Form Form1
    LinkTopic       =   "Form1"
    ScaleHeight     =   7620
    ScaleWidth      =   16545
+   Begin VB.CommandButton Command5 
+      Caption         =   "Command5"
+      Height          =   495
+      Left            =   4320
+      TabIndex        =   36
+      Top             =   1440
+      Width           =   1455
+   End
    Begin VB.CommandButton Command4 
       Caption         =   "Salvar"
       BeginProperty Font 
@@ -690,8 +698,8 @@ rst.Open
 
 If Not rst.EOF Then
     'MsgBox rst.Fields(0).Value
-    txtID.Text = rst.Fields(0).Value
-    intID = rst.Fields(0).Value
+    txtID.Text = rst.Fields(0).value
+    intID = rst.Fields(0).value
 End If
 rst.Close
 '**********************************************
@@ -701,7 +709,7 @@ rst.Open
 
 If Not rst.EOF Then
     'MsgBox rst.Fields(0).Value
-    txtGuid.Text = rst.Fields(0).Value
+    txtGuid.Text = rst.Fields(0).value
 End If
 rst.Close
 
@@ -743,7 +751,7 @@ rst.Source = strSQL
 rst.Open
 
 If Not rst.EOF Then
-    MsgBox rst.Fields(0).Value
+    MsgBox rst.Fields(0).value
     'Exit Sub
 End If
 
@@ -755,7 +763,7 @@ rst.Source = strSQL
 rst.Open
 
 Do While Not rst.EOF
-    MsgBox rst.Fields(0).Value & "-" & rst.Fields(1).Value
+    MsgBox rst.Fields(0).value & "-" & rst.Fields(1).value
     rst.MoveNext
     
 Loop
@@ -775,8 +783,8 @@ rst.Open
 
 If Not rst.EOF Then
     'MsgBox rst.Fields(0).Value
-    txtID.Text = rst.Fields(0).Value
-    intID = rst.Fields(0).Value
+    txtID.Text = rst.Fields(0).value
+    intID = rst.Fields(0).value
 End If
 rst.Close
 '**********************************************
@@ -786,7 +794,7 @@ rst.Open
 
 If Not rst.EOF Then
     'MsgBox rst.Fields(0).Value
-    txtGuid.Text = rst.Fields(0).Value
+    txtGuid.Text = rst.Fields(0).value
 End If
 rst.Close
 
@@ -941,7 +949,7 @@ rst.Open
 
 ' Display the data in the recordset.
 Do While (Not rst.EOF)
-   sXMLResult = rst.Fields(0).Value
+   sXMLResult = rst.Fields(0).value
    'Debug.Print (sXMLResult)
    rst.MoveNext
 Loop
@@ -1016,7 +1024,7 @@ Set Rst1 = cmd.Execute
 Debug.Print "----------- R1 ----------- "
 Do While Not Rst1.EOF
     'MsgBox Rst1.Fields("EMPNO").Value & "-" & Rst1.Fields("ENAME").Value & "-" & Rst1.Fields("DEPTNO").Value
-    Debug.Print Rst1.Fields("EMPNO").Value & "-" & Rst1.Fields("ENAME").Value & "-" & Rst1.Fields("DEPTNO").Value
+    Debug.Print Rst1.Fields("EMPNO").value & "-" & Rst1.Fields("ENAME").value & "-" & Rst1.Fields("DEPTNO").value
     Rst1.MoveNext
 Loop
 
@@ -1028,14 +1036,14 @@ Debug.Print "----------- R2 ----------- "
 Set Rst2 = Rst1.NextRecordset
 Do While Not Rst2.EOF
     'MsgBox Rst2.Fields("EMPNO").Value
-    Debug.Print Rst2.Fields("EMPNO").Value
+    Debug.Print Rst2.Fields("EMPNO").value
     Rst2.MoveNext
 Loop
 
 ' Just as in a stored procedure, the REF CURSOR return value must
 ' not be bound in a stored function.
-Prm1.Value = 7839
-Prm2.Value = 0
+Prm1.value = 7839
+Prm2.value = 0
 
 ' Enable PLSQLRSet property
 cmd.Properties("PLSQLRSet") = True
@@ -1048,7 +1056,7 @@ cmd.CommandText = "{CALL Employees.GetDept(?, ?)}"
 Set Rst3 = cmd.Execute
 Debug.Print "----------- R3 ----------- "
 Do While Not Rst3.EOF
-    Debug.Print Rst3.Fields("DEPTNO").Value
+    Debug.Print Rst3.Fields("DEPTNO").value
     Rst3.MoveNext
 Loop
 
@@ -1071,4 +1079,10 @@ Do While (i <= 1000)
     cmdInsertSP_Click
     i = i + 1
 Loop
+End Sub
+
+Private Sub Command5_Click()
+Dim x As String
+x = RandomString(1000)
+MsgBox x
 End Sub
