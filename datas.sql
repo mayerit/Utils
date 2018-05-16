@@ -1,3 +1,23 @@
+--BUSCA DE USUARIOS E PERMISSOES
+EXEC SP_SIG_SEL_LoginUsuario 45708
+EXEC SP_SIG_CONTROLE_ACESSO 210,45708,'FRMEQUIPFECHADURA'
+
+SELECT A.Cod_Sistema, A.Cod_Func,
+	A.Flg_Inclusao, a.Flg_Alteracao, a.Flg_Consulta,
+	A.Flg_Exclusao , upper(b.Nom_Formulario)
+FROM cor_acesso a (NoLock)
+INNER JOIN cor_formulario b (NoLock) ON
+	a.cod_Formulario = b.cod_Formulario 
+	and a.cod_Sistema = B.cod_Sistema 
+WHERE  ( a.Flg_SituacaoRegistro = 1 
+	AND a.cod_sistema = 210)
+	--AND a.cod_func = @CodFunc )
+	AND (rtrim(ltrim(upper(b.Nom_Formulario))) = N'FRMEQUIPFECHADURA' )
+
+
+
+
+
 --BUSCA OBJETOS POR SUBSTRING
 SELECT sm.object_id, OBJECT_NAME(sm.object_id) AS object_name, o.type, o.type_desc, sm.definition  
 FROM sys.sql_modules AS sm  
@@ -5,6 +25,12 @@ JOIN sys.objects AS o ON sm.object_id = o.object_id
 WHERE UPPER(sm.definition) LIKE '%DB_LAGARD%'
 ORDER BY o.type;
 
+--BUSCA OBJETOS PELO NOME
+SELECT sm.object_id, OBJECT_NAME(sm.object_id) AS object_name, o.type, o.type_desc, sm.definition  
+FROM sys.sql_modules AS sm  
+JOIN sys.objects AS o ON sm.object_id = o.object_id  
+WHERE OBJECT_NAME(sm.object_id) = upper('SP_SIG_SEL_ChamadosAuditoriaPeriodoFechadura')
+ORDER BY o.type;
 
 
 SELECT sm.object_id, OBJECT_NAME(sm.object_id) AS object_name, o.type, o.type_desc, sm.definition  
