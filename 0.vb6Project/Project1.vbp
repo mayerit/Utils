@@ -1,8 +1,15 @@
 Type=Exe
 Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\..\Windows\SysWOW64\stdole2.tlb#OLE Automation
-Reference=*\G{B691E011-1797-432E-907A-4D8C69339129}#6.1#0#..\..\..\..\..\Program Files (x86)\Common Files\System\ado\msado15.dll#Microsoft ActiveX Data Objects 6.1 Library
+Reference=*\G{2A75196C-D9EB-4129-B803-931327F72D5C}#2.8#0#..\..\..\..\..\Program Files (x86)\Common Files\System\ado\msado28.tlb#Microsoft ActiveX Data Objects 2.8 Library
+Object={5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0; msflxgrd.ocx
+Object={CDE57A40-8B86-11D0-B3C6-00A0C90AEA82}#1.0#0; MSDATGRD.OCX
+Object={C932BA88-4374-101B-A56C-00AA003668DC}#1.1#0; MSMASK32.OCX
 Form=Form1.frm
 Module=Utils; Utils.bas
+Class=Carro; Carro.cls
+Class=Montadora; Montadora.cls
+Class=CarroCollection; CarroCollection.cls
+Class=MontadoraCOLL; MontadoraCOLL.cls
 IconForm="Form1"
 Startup="Form1"
 ExeName32="Project1.exe"

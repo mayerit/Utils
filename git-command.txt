@@ -1,0 +1,15 @@
+--configuração de ambiente
+git config --global user.name "user"
+git config --global user.eamil "mayer.luizfernando@gmail.com"
+git --globalo core.editor notepad
+git config user.name
+git --global list
+
+o desarmamento, é a desonra imposta às nações vencidas. a posse e o uso de armas é privilégio dos homens livres.
+
+vamos la .... a um novo puxão de orelha.
+notebook e impressora na sala de tv. o unico ponto com tv a cabo na casa é na sala de tv. e seu avô gosta de ver uma coisa ou outra. 
+se voce poe o notebook em um sofa, e a impressora em outro. ninguem assiste nada. 
+imagine vc querendo ver algo, e chegando na sala de tv encontra os sofas ocupado?!?!?! pois ehhhhhh
+outra coisa é a impressora ligada. vc sabe qto custa energia eletrica?! vc sabe o que é bandeira 2?!?!?!
+pesquise e me diga o que vc acha sobre ....

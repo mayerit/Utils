@@ -7,14 +7,15 @@ Data4(7) As Byte
 End Type
 
 'CREATE TABLE [dbo].[employee](
-'    [id] [varchar](36) NULL,
+'    [id] [varchar](36) NOT NULL,
 '    [firstname] [varchar](36) NULL,
 '    [lastname] [varchar](36) NULL,
 '    [designation] [varchar](36) NULL,
 '    [intvalue] [int] NULL,
 '    [decvalue] [decimal](19, 4) NULL,
-'    [datevalue] [datetime] NULL
-') ON [PRIMARY]
+'    [datevalue] [datetime] NULL,
+'    Primary Key(id)
+')
 
 
 

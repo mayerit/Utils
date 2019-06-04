@@ -1,17 +1,228 @@
 VERSION 5.00
+Object = "{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0"; "msflxgrd.ocx"
+Object = "{CDE57A40-8B86-11D0-B3C6-00A0C90AEA82}#1.0#0"; "MSDATGRD.OCX"
+Object = "{C932BA88-4374-101B-A56C-00AA003668DC}#1.1#0"; "MSMASK32.OCX"
 Begin VB.Form Form1 
    Caption         =   "Form1"
-   ClientHeight    =   7620
-   ClientLeft      =   2325
-   ClientTop       =   2475
+   ClientHeight    =   9195
+   ClientLeft      =   2475
+   ClientTop       =   2385
    ClientWidth     =   16545
    LinkTopic       =   "Form1"
-   ScaleHeight     =   7620
+   ScaleHeight     =   9195
    ScaleWidth      =   16545
+   Begin MSMask.MaskEdBox Maskcpfcgc 
+      Height          =   375
+      Left            =   5640
+      TabIndex        =   48
+      Top             =   1800
+      Width           =   2775
+      _ExtentX        =   4895
+      _ExtentY        =   661
+      _Version        =   393216
+      PromptInclude   =   0   'False
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Arial"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      PromptChar      =   "_"
+   End
+   Begin MSDataGridLib.DataGrid DataGrid1 
+      Height          =   3375
+      Left            =   360
+      TabIndex        =   47
+      Top             =   1440
+      Width           =   4455
+      _ExtentX        =   7858
+      _ExtentY        =   5953
+      _Version        =   393216
+      HeadLines       =   1
+      RowHeight       =   15
+      FormatLocked    =   -1  'True
+      BeginProperty HeadFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ColumnCount     =   2
+      BeginProperty Column00 
+         DataField       =   ""
+         Caption         =   ""
+         BeginProperty DataFormat {6D835690-900B-11D0-9484-00A0C91110ED} 
+            Type            =   0
+            Format          =   ""
+            HaveTrueFalseNull=   0
+            FirstDayOfWeek  =   0
+            FirstWeekOfYear =   0
+            LCID            =   1046
+            SubFormatType   =   0
+         EndProperty
+      EndProperty
+      BeginProperty Column01 
+         DataField       =   ""
+         Caption         =   ""
+         BeginProperty DataFormat {6D835690-900B-11D0-9484-00A0C91110ED} 
+            Type            =   0
+            Format          =   ""
+            HaveTrueFalseNull=   0
+            FirstDayOfWeek  =   0
+            FirstWeekOfYear =   0
+            LCID            =   1046
+            SubFormatType   =   0
+         EndProperty
+      EndProperty
+      SplitCount      =   1
+      BeginProperty Split0 
+         BeginProperty Column00 
+            Button          =   -1  'True
+         EndProperty
+         BeginProperty Column01 
+         EndProperty
+      EndProperty
+   End
+   Begin VB.CommandButton cmdCarro 
+      Caption         =   "Command6"
+      Height          =   495
+      Left            =   14040
+      TabIndex        =   46
+      Top             =   360
+      Width           =   1095
+   End
+   Begin VB.TextBox Text4 
+      BeginProperty Font 
+         Name            =   "Consolas"
+         Size            =   12
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Left            =   2280
+      TabIndex        =   45
+      Text            =   "LUIZ FERNANDO MARTINS MAYER"
+      Top             =   1080
+      Width           =   4095
+   End
+   Begin VB.CommandButton cmdFlexGridAddItem 
+      Caption         =   "Flex Grid Add Item"
+      Height          =   375
+      Left            =   6840
+      TabIndex        =   44
+      Top             =   840
+      Width           =   1695
+   End
+   Begin VB.CommandButton cmdFlexGrid 
+      Caption         =   "Flex Grid Clip"
+      Height          =   375
+      Left            =   5400
+      TabIndex        =   43
+      Top             =   840
+      Width           =   1335
+   End
+   Begin MSFlexGridLib.MSFlexGrid MSFlexGrid1 
+      Height          =   3135
+      Left            =   5160
+      TabIndex        =   42
+      Top             =   3120
+      Width           =   11175
+      _ExtentX        =   19711
+      _ExtentY        =   5530
+      _Version        =   393216
+      FixedCols       =   0
+      SelectionMode   =   1
+      AllowUserResizing=   1
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Arial"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+   End
+   Begin VB.CommandButton cmdGenID 
+      Caption         =   "Gen ID"
+      BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   495
+      Left            =   9360
+      TabIndex        =   41
+      Top             =   6960
+      Width           =   3495
+   End
+   Begin VB.TextBox txtGenID 
+      BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Left            =   840
+      TabIndex        =   40
+      Top             =   6960
+      Width           =   8415
+   End
+   Begin VB.CommandButton cmdExecProcSSERVER 
+      Caption         =   "Exec Proc SQL SERVER"
+      BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   495
+      Left            =   360
+      TabIndex        =   38
+      Top             =   7800
+      Width           =   3495
+   End
+   Begin VB.CommandButton Command6 
+      Caption         =   "Command6"
+      Height          =   495
+      Left            =   10560
+      TabIndex        =   37
+      Top             =   120
+      Width           =   1095
+   End
    Begin VB.CommandButton Command5 
       Caption         =   "Command5"
       Height          =   495
-      Left            =   4320
+      Left            =   3120
       TabIndex        =   36
       Top             =   1440
       Width           =   1455
@@ -96,9 +307,9 @@ Begin VB.Form Form1
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   6600
+      Left            =   6000
       TabIndex        =   29
-      Top             =   1320
+      Top             =   120
       Width           =   1695
    End
    Begin VB.Frame Frame1 
@@ -556,6 +767,24 @@ Begin VB.Form Form1
       Top             =   600
       Width           =   4095
    End
+   Begin VB.Label Label11 
+      AutoSize        =   -1  'True
+      Caption         =   "ID"
+      BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   240
+      Left            =   480
+      TabIndex        =   39
+      Top             =   7080
+      Width           =   195
+   End
    Begin VB.Label Label10 
       AutoSize        =   -1  'True
       Caption         =   "Label1"
@@ -628,7 +857,50 @@ Attribute VB_Exposed = False
 'http://www.c-sharpcorner.com/UploadFile/nipuntomar/connection-strings-for-oracle/
 'http://www.macoratti.net/vb6_msfg.htm
 
+Private Sub ReadXMLDoc()
+
+Dim xmlDoc As New MSXML2.DOMDocument30
+Dim nodeBook As IXMLDOMElement
+Dim nodeId As IXMLDOMAttribute
+Dim sIdValue As String
+xmlDoc.async = False
+xmlDoc.Load App.Path & "\books.xml"
+If (xmlDoc.parseError.errorCode <> 0) Then
+   Dim myErr
+   Set myErr = xmlDoc.parseError
+   MsgBox ("You have error " & myErr.reason)
+Else
+   Set nodeBook = xmlDoc.selectSingleNode("//book")
+   Set nodeId = nodeBook.getAttributeNode("id")
+   sIdValue = nodeId.xml
+   MsgBox sIdValue
+End If
+End Sub
+
 Private Sub cmdQuery_Click()
+
+End Sub
+
+Private Sub cmdCarro_Click()
+Dim x As Carro
+Dim xc As Collection
+Dim I As Integer
+
+Set xc = New Collection
+Do While I <= 100
+    Set x = New Carro
+    x.CarroID = GetGUID
+    x.CarroNome = "**** Nome + " + CStr(I) + " " + x.CarroID
+        
+    Randomize
+    x.CarroAno = Int((1980 * Rnd) + 1950) '// Generate random value between 1 and 100.
+    xc.Add x
+    I = I + 1
+Loop
+
+Debug.Print x.CarroID & "-" & x.CarroNome
+
+
 
 End Sub
 
@@ -656,6 +928,150 @@ Set con = Nothing
 
 End Sub
 
+Private Sub cmdExecProcSSERVER_Click()
+Dim con As New ADODB.Connection
+Dim rst As New ADODB.Recordset
+Dim strSQL As String, intID As Integer
+Dim I As Long
+
+
+con.ConnectionString = "Provider=SQLNCLI11;Server=LAPTOP-UPBU2BQP;Database=POC;Trusted_Connection=yes;timeout=30;"
+'LAPTOP-UPBU2BQP
+
+con.Open
+con.IsolationLevel = adXactSerializable
+strSQL = "SET DATEFORMAT DMY"
+con.Execute strSQL
+'******************************************************
+strSQL = ""
+Dim objCmd As New ADODB.Command
+Dim cmd As ADODB.Command
+Set cmd = New ADODB.Command
+With cmd
+    .ActiveConnection = con
+    .CommandType = adCmdStoredProc
+    .CommandText = "dbo.sp_GetCalendar"
+    .Parameters.Append cmd.CreateParameter("@ANONUM", adBigInt, , , 2018)
+End With
+Set rst = cmd.Execute
+
+Do While Not rst.EOF
+    Debug.Print rst("datab") & "****" & rst("anonum")
+    rst.MoveNext
+Loop
+
+Set rst = New ADODB.Recordset
+rst.Open "exec dbo.sp_GetCalendar @ANONUM = 2018", con, adOpenForwardOnly, adLockReadOnly
+I = 0
+Do While Not rst.EOF
+    I = I + 1
+    Debug.Print CStr(I) & "****" & rst("datab") & "****" & rst("anonum")
+    rst.MoveNext
+Loop
+
+End Sub
+
+Private Sub cmdFlexGrid_Click()
+
+Dim con As New ADODB.Connection
+Dim rst As New ADODB.Recordset
+Dim strSQL As String, intID As Integer
+
+con.ConnectionString = "Provider=SQLNCLI11;Server=LAPTOP-UPBU2BQP;Database=AdventureWorks2012;Trusted_Connection=yes;timeout=30;"
+'LAPTOP-UPBU2BQP
+
+con.Open
+con.IsolationLevel = adXactSerializable
+strSQL = "SET DATEFORMAT DMY"
+con.Execute strSQL
+
+strSQL = "SELECT TOP (1000) * FROM [AdventureWorks2012].[HumanResources].[Employee]"
+rst.Open strSQL, con, adOpenStatic, adLockReadOnly
+rst.MoveFirst
+
+MSFlexGrid1.Rows = rst.RecordCount + 1
+MSFlexGrid1.Cols = rst.Fields.Count + 1 ' - 1
+MSFlexGrid1.Row = 0
+MSFlexGrid1.Col = 0
+
+For Each x In rst.Fields
+    MSFlexGrid1.Text = x.Name
+    MSFlexGrid1.Col = MSFlexGrid1.Col + 1
+Next
+
+MSFlexGrid1.Cols = MSFlexGrid1.Cols - 1
+
+MSFlexGrid1.Row = 1
+MSFlexGrid1.Col = 0
+MSFlexGrid1.RowSel = MSFlexGrid1.Rows - 1
+MSFlexGrid1.ColSel = MSFlexGrid1.Cols - 1
+
+
+
+MSFlexGrid1.Clip = rst.GetString(adClipString, -1, Chr(9), Chr(13), vbNullString)
+MSFlexGrid1.Row = 1
+
+
+End Sub
+
+Private Sub cmdFlexGridAddItem_Click()
+
+Dim con As New ADODB.Connection
+Dim rst As New ADODB.Recordset
+Dim strSQL As String, strLINE As String
+
+con.ConnectionString = "Provider=SQLNCLI11;Server=LAPTOP-UPBU2BQP;Database=AdventureWorks2012;Trusted_Connection=yes;timeout=30;"
+'LAPTOP-UPBU2BQP
+
+con.Open
+con.IsolationLevel = adXactSerializable
+strSQL = "SET DATEFORMAT DMY"
+con.Execute strSQL
+
+strSQL = "SELECT TOP (1000) * FROM [AdventureWorks2012].[HumanResources].[Employee]"
+rst.Open strSQL, con, adOpenStatic, adLockReadOnly
+rst.MoveFirst
+
+MSFlexGrid1.Rows = 1
+MSFlexGrid1.Cols = rst.Fields.Count + 1 ' - 1
+
+For Each x In rst.Fields
+    MSFlexGrid1.Text = x.Name
+    MSFlexGrid1.Col = MSFlexGrid1.Col + 1
+Next
+
+MSFlexGrid1.Row = 0
+MSFlexGrid1.Col = 0
+
+Do Until rst.EOF
+    
+    strLINE = vbNullString
+    For Each x In rst.Fields
+        strLINE = strLINE & x.value & vbTab
+    Next
+    MSFlexGrid1.AddItem strLINE
+    rst.MoveNext
+Loop
+
+MSFlexGrid1.Cols = MSFlexGrid1.Cols - 1
+
+MSFlexGrid1.Row = 1
+MSFlexGrid1.Col = 0
+MSFlexGrid1.RowSel = MSFlexGrid1.Rows - 1
+MSFlexGrid1.ColSel = MSFlexGrid1.Cols - 1
+
+
+
+'MSFlexGrid1.Clip = rst.GetString(adClipString, -1, Chr(9), Chr(13), vbNullString)
+MSFlexGrid1.Row = 1
+
+
+End Sub
+
+Private Sub cmdGenID_Click()
+    txtGenID.Text = GetGUID
+End Sub
+
 Private Sub cmdGuid_Click()
     MsgBox GetGUID
 End Sub
@@ -676,6 +1092,8 @@ Dim strSQL As String, intID As Integer
 
 
 con.ConnectionString = "Provider=SQLNCLI11;Server=(localdb)\MSSQLLocalDB;Database=POC;Trusted_Connection=yes;timeout=30;"
+con.ConnectionString = "Provider=SQLNCLI11;Server=LAPTOP-UPBU2BQP;Database=POC;Trusted_Connection=yes;timeout=30;"
+'LAPTOP-UPBU2BQP
 
 con.Open
 con.IsolationLevel = adXactSerializable
@@ -734,10 +1152,20 @@ Dim strSQL As String, intID As Integer
 'con.ConnectionString = "Provider=OraOLEDB.Oracle;dbq=192.168.68.31:1521/XE;Database=myDataBase;User Id=myUsername;Password=myPassword;"
 'con.ConnectionString = "Provider=OraOLEDB.Oracle;dbq=192.168.68.31:1521;User Id=scott;Password=tiger;"
 con.Provider = "OraOLEDB.Oracle"
-con.Properties("Data Source") = "ORCL_31"
+con.Properties("Data Source") = "ORCL"
 con.Properties("User Id") = "scott"
 con.Properties("Password") = "tiger"
 con.Open
+
+
+
+'Provider=OraOLEDB.Oracle;dbq=localhost:1521/XE;Database=AdventureWorks2016;User Id=myUsername;Password=myPassword;
+
+'Provider=OraOLEDB.Oracle;
+'Data Source=(DESCRIPTION=(CID=GTU_APP)(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=myHost)(PORT=myPort)))(CONNECT_DATA=(SID=MyOracleSID)(SERVER=DEDICATED)));
+'User Id=myUsername;Password=myPassword;
+
+
 
 'con.Open
 'con.IsolationLevel = adXactSerializable
@@ -861,12 +1289,12 @@ Set con = Nothing
 End Sub
 
 Private Sub cmdRoda1000_Click()
-Dim i As Integer
+Dim I As Integer
 
-i = 1
-Do While (i <= 1000)
+I = 1
+Do While (I <= 1000)
     cmdInsert_Click
-    i = i + 1
+    I = I + 1
 Loop
 End Sub
 
@@ -876,7 +1304,7 @@ Private Sub cmdSQLServer_Click()
  Dim strSQLStmt As String
 
  '-- Build the connection string
- sConnectionString = "PROVIDER = MSDASQL;driver={SQL Server};database=POC ;server=ROOT-18826FD16E;uid=sa;pwd=su79000;"
+ sConnectionString = "PROVIDER = MSDASQL;driver={SQL Server};database=POC ;server=LAPTOP-UPBU2BQP;uid=sa;pwd=su79000;"
 
 
  strSQLStmt = "SELECT * from employee "
@@ -935,7 +1363,7 @@ Dim rst As New ADODB.Recordset
 Dim sXMLResult As String
 
 con.ConnectionString = "Provider=SQLOLEDB;" _
-         & "Server=ROOT-18826FD16E;" _
+         & "Server=LAPTOP-UPBU2BQP;" _
          & "Database=POC;" _
          & "Integrated Security=SSPI;" _
          & "DataTypeCompatibility=80;"
@@ -1072,12 +1500,12 @@ End Sub
 
 
 Private Sub Command2_Click()
-Dim i As Integer
+Dim I As Integer
 
-i = 1
-Do While (i <= 1000)
+I = 1
+Do While (I <= 1000)
     cmdInsertSP_Click
-    i = i + 1
+    I = I + 1
 Loop
 End Sub
 
@@ -1086,3 +1514,74 @@ Dim x As String
 x = RandomString(1000)
 MsgBox x
 End Sub
+
+Private Sub Command6_Click()
+
+'ORAOLEDB
+'https://docs.oracle.com/cd/E47955_01/win.121/e18594/using.htm
+
+Dim con As New ADODB.Connection
+Dim strSQL As String
+Dim rst As ADODB.Recordset
+con.Provider = "OraOLEDB.Oracle"
+con.ConnectionString = "FetchSize=200;CacheType=Memory;" & _
+                       "OSAuthent=0;PLSQLRSet=1;Data Source=ORCL;" & _
+                       "User ID=system;Password=su79000;"
+con.Open
+
+Set rst = con.Execute("select * from hr.employees")
+If Not rst.EOF Then
+    
+    MsgBox rst(0).value
+End If
+
+
+
+
+End Sub
+
+Private Sub Command7_Click()
+
+End Sub
+
+Private Function calculacpf(CPF As String) As Boolean
+    calculacpf = True
+End Function
+
+Public Function ValidaCGC(CGC As String) As Boolean
+    ValidaCGC = True
+End Function
+
+Private Sub Maskcpfcgc_LostFocus()
+    If Len(Maskcpfcgc.Text) > 0 Then
+      Select Case Len(Maskcpfcgc.Text)
+       Case Is = 11
+         Maskcpfcgc.Mask = "###.###.###-##"
+         If Not calculacpf(Maskcpfcgc.Text) Then
+            MsgBox "CPF com DV incorreto !!!"
+            Maskcpfcgc = ""
+            Maskcpfcgc.Mask = "###############"
+            Maskcpfcgc.SetFocus
+         End If
+       Case Is = 14
+         Maskcpfcgc.Mask = "##.###.###/####-##"
+         If Not ValidaCGC(Maskcpfcgc.Text) Then
+            MsgBox "CGC com DV incorreto !!! "
+            Maskcpfcgc = ""
+            Maskcpfcgc.Mask = "###############"
+            Maskcpfcgc.SetFocus
+         End If
+      End Select
+    End If
+End Sub
+Private Sub Maskcpfcgc_GotFocus()
+  Maskcpfcgc.Mask = "###############"
+End Sub
+Private Sub Maskcpfcgc_KeyPress(KeyAscii As Integer)
+  'se teclar enter envia um TAB
+  If KeyAscii = 13 Then
+     SendKeys "{TAB}"
+     KeyAscii = 0
+  End If
+End Sub
+

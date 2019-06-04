@@ -1,0 +1,4 @@
+﻿{"RecordCount":4,"Fields":[{"Name":"Year","Type":"INTEGER","PrimaryKey":false,"Nullable":true,"DefaultValue":null},{"Name":"Color","Type":"TEXT","PrimaryKey":false,"Nullable":true,"DefaultValue":null},{"Name":"Val1","Type":"REAL","PrimaryKey":false,"Nullable":true,"DefaultValue":null},{"Name":"Val2","Type":"REAL","PrimaryKey":false,"Nullable":true,"DefaultValue":null}],"RowsCols":[[2004,"Red",2.28,2.27],[2002,"Purple",2.22,2.22],[2000,"Lavendar",382.125,2.176],[1998,"Royal Blue",7,2.124],[3000,"Luiz Fernando",9,9.123]]}
+
+
+
